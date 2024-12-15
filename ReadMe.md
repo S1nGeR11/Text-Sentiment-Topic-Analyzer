@@ -32,13 +32,9 @@ Topic — тема сообщения (например, "экономика", "
 Динамика популярности тем — отображает, какие темы были наиболее популярны.
 Пример использования:
 1. Без создания графиков:
-
-
-python TextAnalyzer.py C:/path/to/input.html C:/path/to/output.csv
+text-analyzer --input_path "C:/path/to/your/messages.html" --output_path "C:/path/to/save/analyzed_messages.csv"
 2. С созданием графиков:
-
-
-python TextAnalyzer.py C:/path/to/input.html C:/path/to/output.csv --create-plots
+text-analyzer --input_path "C:/path/to/your/messages.html" --output_path "C:/path/to/save/analyzed_messages.csv" --plot
 Структура данных в CSV:
 Программа генерирует файл CSV, который будет иметь следующий формат:
 
