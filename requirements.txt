@@ -1,0 +1,6 @@
+pandas
+transformers
+beautifulsoup4
+matplotlib
+tqdm
+numpy

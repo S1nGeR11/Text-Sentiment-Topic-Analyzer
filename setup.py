@@ -1,28 +1,21 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="TelegramHTMLAnalyzer",                     
-    version="0.1",                          
-    packages=find_packages(),                
+    name='text_sentiment_topic_analyzer',
+    version='0.1',
+    packages=find_packages(),  # Это находит все пакеты, включая вашу директорию с кодом
     install_requires=[
-        "pandas",
-        "transformers",
-        "beautifulsoup4",
-        "matplotlib",
-        "tqdm"
-    ],                                     
+        'pandas',
+        'beautifulsoup4',
+        'transformers',
+        'torch',  # Убедитесь, что здесь указана правильная версия для вашей системы
+        'matplotlib',
+        'tqdm',
+        'argparse'
+    ],
     entry_points={
         'console_scripts': [
-            'analyze_messages=project_name.TextAnalyzer:main',  
+            'text-analyzer = text_sentiment_topic_analyzer.TextAnalyzer:main',  # Указание точки входа
         ],
     },
-    author="Maxim Kozhin",                     
-    description="A tool for HTML message analysis", 
-    long_description=open("README.md").read(),
-    long_description_content_type="text/markdown",
-    url="https://github.com/S1nGeR11/Text-Sentiment-Topic-Analyzer",  # Ссылка на репозиторий
-    classifiers=[
-        "Programming Language :: Python :: 3.9",
-    ],
-    python_requires=">=3.8",               
 )

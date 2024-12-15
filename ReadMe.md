@@ -3,33 +3,28 @@ TextAnalyzer — это Python-скрипт, который анализируе
 Установка
 Убедитесь, что у вас установлен Python версии 3.7 и выше.
 Установите все необходимые библиотеки, выполнив команду:
-bash
-Копировать код
+
+
 pip install -r requirements.txt
 requirements.txt должен содержать все необходимые зависимости для работы программы. Вот пример того, как он может выглядеть:
 
 makefile
-Копировать код
+
 beautifulsoup4==4.11.1
 pandas==1.5.3
 transformers==4.26.1
 torch==2.0.1
 matplotlib==3.6.2
 tqdm==4.64.1
-Если у вас еще нет файла requirements.txt, вы можете создать его вручную или собрать с помощью команды:
-bash
-Копировать код
-pip freeze > requirements.txt
-Использование через командную строку
-Запуск программы
-Для запуска программы в командной строке используйте следующую команду:
 
-bash
-Копировать код
-python TextAnalyzer.py <input_html_file> <output_csv_file> [--create-plots]
+
+Сохраните ZIP архив со скриптом. В папке запустите терминал и введите команду  "pip install .", после чего скрипт установится на ваш пк. В следующий раз скрипт будет вызываться командой "text-analyzer"
+
+text-analyzer <input_html_file> <output_csv_file> [--create-plots]
 Аргументы:
 <input_html_file> — путь к вашему HTML файлу с сообщениями для анализа. Программа будет парсить и анализировать все сообщения в этом файле.
 <output_csv_file> — путь, по которому будет сохранен файл CSV с результатами анализа. CSV файл будет содержать столбцы:
+Например: text-analyzer --input_path "C:/path/to/your/messages.html" --output_path "C:/path/to/save/analyzed_messages.csv" --plot
 Date — дата сообщения.
 Text — начало текста сообщения (до 10 слов).
 Semantic Tag — эмоциональная окраска сообщения (например, "POSITIVE", "NEGATIVE", "NEUTRAL").
@@ -39,12 +34,12 @@ Topic — тема сообщения (например, "экономика", "
 Динамика популярности тем — отображает, какие темы были наиболее популярны.
 Пример использования:
 1. Без создания графиков:
-bash
-Копировать код
+
+
 python TextAnalyzer.py C:/path/to/input.html C:/path/to/output.csv
 2. С созданием графиков:
-bash
-Копировать код
+
+
 python TextAnalyzer.py C:/path/to/input.html C:/path/to/output.csv --create-plots
 Структура данных в CSV:
 Программа генерирует файл CSV, который будет иметь следующий формат:
