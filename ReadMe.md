@@ -6,9 +6,7 @@ TextAnalyzer — это Python-скрипт, который анализируе
 
 
 pip install -r requirements.txt
-requirements.txt должен содержать все необходимые зависимости для работы программы. Вот пример того, как он может выглядеть:
-
-makefile
+requirements.txt должен содержать все необходимые зависимости для работы программы.
 
 beautifulsoup4==4.11.1
 pandas==1.5.3
